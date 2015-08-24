@@ -1,0 +1,1 @@
+var libraryApp = angular.module('libraryApp', ['libraryCtrls']);

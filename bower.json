@@ -1,0 +1,25 @@
+{
+  "name": "the-library",
+  "version": "0.0.5",
+  "homepage": "https://github.com/jibeetz/the-library",
+  "authors": [
+    "JB <jbernus@gmail.com>"
+  ],
+  "description": "Dynamic library with JSON and Angular",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4"
+  }
+}
