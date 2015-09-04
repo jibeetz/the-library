@@ -1,2 +1,2 @@
 # the-library
-Dynamic library with JSON and Angular
+Dynamic library with AngularJs
