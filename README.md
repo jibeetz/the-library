@@ -1,2 +1,4 @@
 # the-library
-Dynamic library with AngularJs
+Display a list of data and apply different kinds of dynamic filters on it.
+
+# Run

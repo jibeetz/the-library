@@ -14,7 +14,7 @@ libraryCtrls.controller('booksCtrl', ['$scope', '$http', 'getLibrary', 'langDefa
 	});
 
 	$scope.clearSearch = function(){
-		$scope.keyword = '';
+		$scope.books.keyword = '';
 	}
 
 	// Categories
@@ -41,7 +41,7 @@ libraryCtrls.controller('booksCtrl', ['$scope', '$http', 'getLibrary', 'langDefa
 	}
 
 	$scope.resetFilters = function(){
-		$scope.keyword = '';
+		$scope.books.keyword = '';
 		$scope.cats = [];
 		angular.forEach($scope.catsList, function (cat) {
 			cat.selected = false;
@@ -64,20 +64,24 @@ libraryCtrls.controller('booksCtrl', ['$scope', '$http', 'getLibrary', 'langDefa
 
 		var lettersList = [];
 
-		angular.forEach($scope.filteredBooks, function(book){
+		angular.forEach($scope.books.filteredBooks, function(book){
 			var firstLetter = book.title.charAt(0).toLowerCase();
 			lettersList.push(firstLetter);
 		});
 
 		for (var i = 0; i < lettersList.length - 1; i++){
-			if(lettersList[i + 1] == lettersList[i]){
+			if(lettersList[i + 1] === lettersList[i]){
 				var index = lettersList.indexOf(lettersList[i]);
 				if (index > -1)
 					lettersList.splice(index, 1);
 			}
 		}
+
+
 		if(lettersList.length < 2)
 			return true;
+
+
 
 		return (lettersList.indexOf(letter) > -1) ? false : true;
 	}

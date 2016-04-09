@@ -1,6 +1,36 @@
-<img ng-src="{{podcastImg}}" alt="" id="logo" ng-show="podcastImg.length">
-<div id="title">
-	<h2><a href="#/{{feed.slug}}">{{podcastTitle}}</a></h2>
-	<div class="sub">{{feed.description}}</div>
-	<div class="sub sub-author">{{feed.author}}</div>
+
+<h2>Filters</h2>
+
+<h3>Categories</h3>
+<ul class="filters categories cf">
+	<li ng-repeat="(categoryKey, category) in catsList">
+		<label><input type="checkbox" ng-click="inCat(categoryKey)" ng-disabled="catState(categoryKey)" ng-model="category.selected" /><span>{{category.en}}</span<</label>
+	</li>
+</ul>
+
+<h3>
+	Alphabetically
+	<a class="reset-letters" ng-click="setActiveLetter('')" ng-show="activeLetter.length">Reset</a>
+</h3>
+<ul class="filters letters cf">
+	<li ng-repeat="letter in alphabet">
+		<button ng-click="setActiveLetter(letter)" ng-class="{'active': letter==activeLetter}" ng-disabled="letterState(letter)">{{letter}}</button>
+	</li>
+</ul>
+
+<div class="cf">
+	<div class="filters keyword cf">
+		<h3>Keyword</h3>
+		<input type="text" class="book-search" ng-model="books.keyword"/>
+		<a class="clear-search" href="" ng-show="books.keyword.length" ng-click="clearSearch()">X</a>
+	</div>
+
+	<div class="filters langs cf">
+		<h3>Languages</h3>
+		<ul>
+			<li ng-repeat="(langKey, lang) in langsList">
+				<label><input type="checkbox" ng-click="inLang(langKey)" ng-model="lang.selected" ng-disabled="langState(langKey)"/><span>{{lang.label}}</span></label>
+			</li>
+		</ul>
+	</div>
 </div>

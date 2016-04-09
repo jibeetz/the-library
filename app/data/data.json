@@ -17712,19 +17712,23 @@
     "languages":{
         "en":{
             "selected":"false",
-            "disabled":"false"
+            "disabled":"false",
+            "label":"English"
         },
         "de":{
             "selected":"false",
-            "disabled":"false"
+            "disabled":"false",
+            "label":"German"
         },
         "fr":{
             "selected":"false",
-            "disabled":"false"
+            "disabled":"false",
+            "label":"French"
         },
         "it":{
             "selected":"false",
-            "disabled":"false"
+            "disabled":"false",
+            "label":"Italian"
         }
     }
 }

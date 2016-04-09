@@ -7,14 +7,17 @@
 		<meta name="viewport" content="width=device-width">
 		<link href="dist/css/style.css" rel="stylesheet" type="text/css">
 		<script src="dist/js/main.js"></script>
-		<script>libraryApp.constant('langDefault', 'fr');</script>
+		<script>libraryApp.constant('langDefault', 'en');</script>
 	</head>
 	<body>
 
-		<div id="container">
-			<!-- <ng-include src="'partials/filters.html'"></ng-include>
+		<div class="container">
+			<h1>{{pageTitle}}</h1>
 
-			<ng-include src="'partials/list.html'"></ng-include> -->
+			<ng-include src="'partials/filters.html'"></ng-include>
+
+			<ng-include src="'partials/list.html'"></ng-include>
+
 		</div>
 	</body>
 </html>
