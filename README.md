@@ -2,3 +2,5 @@
 Display a list of data and apply different kinds of dynamic filters on it.
 
 # Run
+`npm install`
+`npm start`
